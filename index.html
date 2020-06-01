@@ -1,1 +1,35 @@
-start index
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
+		<link rel="stylesheet" href="style.css">
+		<title>JS Challenge</title>
+	</head>
+	<body>
+        <div class="primer">
+            <div class="container-color" id="container"></div>
+            <div class="btn-wrap">
+                <div class="btn yellow" colorName="#ffe500e6"></div>
+                <div class="btn salad" colorName="#4CAF50"></div>
+                <div class="btn pink" colorName="#ffc0cb"></div>
+            </div>
+        </div>
+    </body>
+    <script>
+        var btn = document.getElementsByClassName('btn');
+        var container = document.getElementById("container");
+        
+        for (var i = 0 ; i < btn.length; i++) {
+            btn[i].addEventListener('click' , addcolor , false ) ; 
+        }
+  
+        function addcolor(){
+          var attribute = this.getAttribute('colorName');
+          container.style.background = attribute;
+        
+
+        }
+    </script>
+</html>
