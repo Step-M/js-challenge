@@ -11,16 +11,13 @@
         <div class="primer">
             <div class="container-color" id="container"></div>
             <div class="btn-wrap">
-                <div class="btn yellow" colorName="yellow"></div>
-                <div class="btn salad" colorName="green"></div>
-                <div class="btn pink" colorName="pink"></div>
+                <div class="btn yellow" colorName="#ffe500e6"></div>
+                <div class="btn salad" colorName="#4CAF50"></div>
+                <div class="btn pink" colorName="#ffc0cb"></div>
             </div>
         </div>
     </body>
     <script>
-        const YELLOW = "#ffe500e6"
-        const GREEN = "#4CAF50"
-        const PINK = "#ffc0cb"
         var btn = document.getElementsByClassName('btn');
         var container = document.getElementById("container");
         
@@ -30,15 +27,9 @@
   
         function addcolor(){
           var attribute = this.getAttribute('colorName');
+          container.style.background = attribute;
+        
 
-          if (attribute == 'yellow'){
-            container.style.background = YELLOW;
-          }  else if(attribute == 'green'){
-            container.style.background = GREEN;
-          }  else{
-            container.style.background = PINK;
-          }
-          
         }
     </script>
 </html>
